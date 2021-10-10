@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 import com.mv.entities.Colaborador;
 import com.mv.services.ColaboradorService;
 
-@CrossOrigin(origins = "http://domain2.com", maxAge = 3600)
 @RestController
 @RequestMapping(value = "/colaborador")
 public class ColaboradorController {
