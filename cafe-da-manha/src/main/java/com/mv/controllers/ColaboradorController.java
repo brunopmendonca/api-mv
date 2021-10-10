@@ -17,21 +17,21 @@ public class ColaboradorController {
 	@Autowired
 	private ColaboradorService service;
 
-	@CrossOrigin
+
 	@GetMapping(value = "/{cpf}")
 	public ResponseEntity<Colaborador> findByCpf(@PathVariable String cpf) {
 		Colaborador obj = service.findByCpf(cpf);
 		return ResponseEntity.ok().body(obj);
 	}
 
-	@CrossOrigin
+
 	@PostMapping
 	public ResponseEntity<Colaborador> insert(@RequestBody Colaborador obj) {
 		obj = service.insert(obj);
 		return ResponseEntity.ok().body(obj);
 	}
 
-	@CrossOrigin
+
 	@DeleteMapping(value = "/{cpf}")
 	public ResponseEntity<Void> delete(@PathVariable String cpf) {
 
@@ -40,14 +40,14 @@ public class ColaboradorController {
 		return ResponseEntity.noContent().build();
 	}
 
-	@CrossOrigin
+
 	@PutMapping
 	public ResponseEntity<Colaborador> update(@RequestBody Colaborador entity) {
 		Colaborador obj = service.update(entity);
 		return ResponseEntity.ok().body(obj);
 	}
 
-	@CrossOrigin
+
 	@GetMapping
 	public ResponseEntity<List<Colaborador>> findAll() {
 		List<Colaborador> list = service.findAll();
